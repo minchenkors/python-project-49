@@ -5,3 +5,4 @@ Even game asciinema https://asciinema.org/a/534994
 Calc game asciinema https://asciinema.org/a/534995
 GCD game asciinema https://asciinema.org/a/535030
 Progression game asciinema https://asciinema.org/a/535046
+Prime game asciinema https://asciinema.org/a/535048
