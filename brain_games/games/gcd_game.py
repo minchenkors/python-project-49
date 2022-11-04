@@ -1,5 +1,5 @@
 from game_manager import GameManager
-from random import randint, choice
+from random import randint
 
 
 class GCDGame(GameManager):
