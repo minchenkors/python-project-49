@@ -19,7 +19,7 @@ class GameManager():
         
     
     def ask_question(self):
-        print(f'Question {self.question}: ')
+        print(f'Question: {self.question}')
         self.player_answer = prompt.string('Your answer: ')
 
     def check_answer(self):

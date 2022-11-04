@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 import sys
 sys.path.insert(1, '/home/minchenkors/python-project-49/brain_games/games')
-from even_game import EvenGame
+from gcd_game import GCDGame
 
 
 def main():
-    my_game = EvenGame()
+    my_game = GCDGame()
     my_game.make_game()
 
 
