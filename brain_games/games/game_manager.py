@@ -16,7 +16,7 @@ class GameManager():
         print('Welcome to the Brain Games!')
         self.player_name = prompt.string('May I have your name? ')
         print(f'Hello, {self.player_name}!')
-        print('Answer "yes" if the number is even, otherwise answer "no".')
+        
     
     def ask_question(self):
         print(f'Question {self.question}: ')

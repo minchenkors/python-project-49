@@ -19,6 +19,7 @@ class CalcGame(GameManager):
     
     def make_game(self):
         self.greet()
+        print('What is the result of the expression?')
         while self.round_number <= 2:
             self.round_number += 1
             self.generate_question()

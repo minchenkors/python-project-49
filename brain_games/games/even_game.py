@@ -16,6 +16,7 @@ class EvenGame(GameManager):
     
     def make_game(self):
         self.greet()
+        print('Answer "yes" if the number is even, otherwise answer "no".')
         while self.round_number <= 2:
             self.round_number += 1
             self.generate_question()
