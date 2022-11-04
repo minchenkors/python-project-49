@@ -9,6 +9,7 @@ class CalcGame(GameManager):
         self.first_number = None
         self.second_number = None
         self.operator = None
+        self.rules = 'What is the result of the expression?'
 
     def generate_question(self):
         self.first_number = randint(1, 20)
@@ -19,7 +20,7 @@ class CalcGame(GameManager):
     
     def make_game(self):
         self.greet()
-        print('What is the result of the expression?')
+        print(self.rules)
         while self.round_number <= 2:
             self.round_number += 1
             self.generate_question()
