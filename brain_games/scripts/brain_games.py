@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 import sys
-from cli import welcome_user
+sys.path.insert(1, '/home/minchenkors/python-project-49/brain_games/games')
 
-sys.path.insert(1, '/home/minchenkors/python-project-49/brain_games')
+from game_manager import GameManager
 
 
 def main():
-    print('Welcome to the Brain Games!')
-    welcome_user()
+    my_game = GameManager()
+    my_game.greet()
 
 
 if __name__ == '__main__':
