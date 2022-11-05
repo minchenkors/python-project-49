@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 import sys
+import prompt
 sys.path.insert(1, '/home/minchenkors/python-project-49/brain_games/games')
-import game_manager  # noqa: E402
 
 
 def main():
-    game_manager.greet()
-    while True:
-        continue
+    print('Welcome to the Brain Games!')
+    player_name = prompt.string('May I have your name? ')
+    print(f'Hello, {player_name}!')
 
 
 if __name__ == '__main__':
