@@ -6,6 +6,8 @@ import game_manager  # noqa: E402
 
 def main():
     game_manager.greet()
+    while True:
+        continue
 
 
 if __name__ == '__main__':
