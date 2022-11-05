@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "brain-games"
-version = "0.3.1"
+version = "1.0.0"
 description = ""
 authors = ["Roman Minchenko <minchenkors@gmail.com>"]
 readme = "README.md"

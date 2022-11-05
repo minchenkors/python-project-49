@@ -1,31 +1,12 @@
-from game_manager import GameManager
 from random import randint, choice
 
+RULES = 'What is the result of the expression?'
 
-class CalcGame(GameManager):
 
-    def __init__(self):
-        super().__init__()
-        self.first_number = None
-        self.second_number = None
-        self.operator = None
-        self.rules = 'What is the result of the expression?'
-
-    def generate_question(self):
-        self.first_number = randint(1, 20)
-        self.second_number = randint(1, 20)
-        self.operator = choice(['+', '-', '*'])
-        self.question = f'{self.first_number} '
-        f'{self.operator}'
-        f'{self.second_number}'
-        self.right_answer = str(eval(self.question))
-
-    def make_game(self):
-        self.greet()
-        print(self.rules)
-        while self.round_number <= 2:
-            self.round_number += 1
-            self.generate_question()
-            self.make_round()
-            if self.check_answer_result is False:
-                break
+def generate_question():
+    first_number = randint(1, 20)
+    second_number = randint(1, 20)
+    operator = choice(['+', '-', '*'])
+    question = f'{first_number} {operator} {second_number}'
+    right_answer = str(eval(question))
+    return {'question': question, 'right_answer': right_answer}
