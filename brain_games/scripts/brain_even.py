@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import sys
 sys.path.insert(1, '/home/minchenkors/python-project-49/brain_games/games')
-from even_game import EvenGame
+from even_game import EvenGame  # noqa: E402
 
 
 def main():

@@ -6,7 +6,8 @@ class PrimeGame(GameManager):
 
     def __init__(self):
         super().__init__()
-        self.rules = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+        self.rules = 'Answer "yes" if given number is prime.'\
+            'Otherwise answer "no".'
 
     def generate_question(self):
         self.question = randint(1, 99)
@@ -15,7 +16,7 @@ class PrimeGame(GameManager):
             if self.question % i == 0:
                 self.right_answer = 'no'
                 break
-    
+
     def make_game(self):
         self.greet()
         print(self.rules)
@@ -23,5 +24,5 @@ class PrimeGame(GameManager):
             self.round_number += 1
             self.generate_question()
             self.make_round()
-            if self.check_answer_result == False:
+            if self.check_answer_result is False:
                 break

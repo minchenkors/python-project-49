@@ -6,7 +6,8 @@ class EvenGame(GameManager):
 
     def __init__(self):
         super().__init__()
-        self.rules = 'Answer "yes" if the number is even, otherwise answer "no".'
+        self.rules = 'Answer "yes" if the number is even, '\
+            'otherwise answer "no".'
 
     def generate_question(self):
         self.question = randint(1, 99)
@@ -14,7 +15,7 @@ class EvenGame(GameManager):
             self.right_answer = 'yes'
         else:
             self.right_answer = 'no'
-    
+
     def make_game(self):
         self.greet()
         print(self.rules)
@@ -22,11 +23,5 @@ class EvenGame(GameManager):
             self.round_number += 1
             self.generate_question()
             self.make_round()
-            if self.check_answer_result == False:
+            if self.check_answer_result is False:
                 break
-
-
-
-
-
-

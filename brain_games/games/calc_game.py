@@ -15,9 +15,11 @@ class CalcGame(GameManager):
         self.first_number = randint(1, 20)
         self.second_number = randint(1, 20)
         self.operator = choice(['+', '-', '*'])
-        self.question = f'{self.first_number} {self.operator} {self.second_number}'
+        self.question = f'{self.first_number} '
+        f'{self.operator}'
+        f'{self.second_number}'
         self.right_answer = str(eval(self.question))
-    
+
     def make_game(self):
         self.greet()
         print(self.rules)
@@ -25,9 +27,5 @@ class CalcGame(GameManager):
             self.round_number += 1
             self.generate_question()
             self.make_round()
-            if self.check_answer_result == False:
+            if self.check_answer_result is False:
                 break
-            
-
-
-

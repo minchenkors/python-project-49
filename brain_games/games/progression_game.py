@@ -1,4 +1,4 @@
-from random import randint, choice
+from random import randint
 from game_manager import GameManager
 
 
@@ -13,11 +13,14 @@ class ProgressionGame(GameManager):
         missing_number_position = randint(0, progression_length - 1)
         starting_number = randint(1, 50)
         step = randint(5, 20)
-        progression = [starting_number + step * i for i in range(0, progression_length)]
+        progression = [
+            starting_number + step * i
+            for i in range(0, progression_length)
+            ]
         self.right_answer = str(progression[missing_number_position])
         progression[missing_number_position] = '..'
         self.question = " ".join(map(str, progression))
-    
+
     def make_game(self):
         self.greet()
         print(self.rules)
@@ -25,5 +28,5 @@ class ProgressionGame(GameManager):
             self.round_number += 1
             self.generate_question()
             self.make_round()
-            if self.check_answer_result == False:
+            if self.check_answer_result is False:
                 break

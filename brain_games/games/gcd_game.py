@@ -28,7 +28,7 @@ class GCDGame(GameManager):
                 break
         self.question = f'{self.first_number} {self.second_number}'
         self.gcd_euclid()
-    
+
     def make_game(self):
         self.greet()
         print(self.rules)
@@ -36,9 +36,5 @@ class GCDGame(GameManager):
             self.round_number += 1
             self.generate_question()
             self.make_round()
-            if self.check_answer_result == False:
+            if self.check_answer_result is False:
                 break
-            
-
-
-
