@@ -32,14 +32,12 @@ def play_game(generate_question, rules):
         player_answer = ask_question(question_params['question'])
         check_result = check_answer(
             player_answer, question_params['right_answer']
-            )
+        )
         if check_result is False:
-            print(
-                "'{0}' is wrong answer ;(. ".format(player_answer) +
-                "Correct answer was '{0}'.".format(
-                    question_params['right_answer']
-                    )
-                )
+            print("'{0}' is wrong answer ;(. ".format(player_answer),
+                  "Correct answer was '{0}'.".format(
+                  question_params['right_answer'])
+                  )
             print(f"Let's try again, {player_name}!")
             break
         else:

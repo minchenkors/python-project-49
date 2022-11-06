@@ -11,7 +11,7 @@ def generate_question():
     progression = [
         starting_number + step * i
         for i in range(0, progression_length)
-        ]
+    ]
     right_answer = str(progression[missing_number_position])
     progression[missing_number_position] = '..'
     question = " ".join(map(str, progression))

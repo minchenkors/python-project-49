@@ -7,7 +7,7 @@ def main():
     play_game(
         generate_question=generate_question,
         rules=RULES
-        )
+    )
 
 
 if __name__ == '__main__':
