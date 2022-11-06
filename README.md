@@ -1,5 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/minchenkors/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/minchenkors/python-project-49/actions)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8233ed9c0d086a63e0d3/maintainability)](https://codeclimate.com/github/minchenkors/python-project-49/maintainability)
 
 This is a brain-games package.
 It has 5 games. Every game shows its rules at start and has 3 rounds. If you pass all 3 rounds you win.
