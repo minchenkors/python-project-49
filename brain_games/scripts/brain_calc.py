@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 import sys
-sys.path.insert(1, '/home/minchenkors/python-project-49/brain_games/games')
-import calc_game  # noqa: E402
-import game_manager  # noqa: E402
+import os
+sys.path.append(os.path.join(sys.path[0], '../games'))
+from calc_game import generate_question, RULES  # noqa: E402
+from game_manager import play_game  # noqa: E402
 
 
 def main():
-    game_manager.play_game(
-        generate_question=calc_game.generate_question,
-        rules=calc_game.RULES)
+    play_game(
+        generate_question=generate_question,
+        rules=RULES
+        )
 
 
 if __name__ == '__main__':
