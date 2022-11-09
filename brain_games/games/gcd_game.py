@@ -21,5 +21,5 @@ def generate_question():
         if first_number != second_number:
             break
     question = f'{first_number} {second_number}'
-    right_answer = str(gcd_euclid(first_number, second_number))
-    return question, right_answer
+    answer = str(gcd_euclid(first_number, second_number))
+    return question, answer

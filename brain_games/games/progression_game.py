@@ -10,9 +10,9 @@ def generate_question():
     step = randint(5, 20)
     progression = [
         starting_number + step * i
-        for i in range(0, progression_length)
+        for i in range(progression_length)
     ]
-    right_answer = str(progression[missing_number_position])
+    answer = str(progression[missing_number_position])
     progression[missing_number_position] = '..'
     question = " ".join(map(str, progression))
-    return question, right_answer
+    return question, answer

@@ -1,6 +1,12 @@
 from random import randint, choice
+import operator
 
 DESCRIPTION = 'What is the result of the expression?'
+operators = {
+    '+': operator.add,
+    '-': operator.sub,
+    '*': operator.mul
+}
 
 
 def generate_question():
@@ -8,5 +14,5 @@ def generate_question():
     second_number = randint(1, 20)
     operator = choice(['+', '-', '*'])
     question = f'{first_number} {operator} {second_number}'
-    right_answer = str(eval(question))
-    return question, right_answer
+    answer = str(operators[operator](first_number, second_number))
+    return question, answer

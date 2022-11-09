@@ -6,5 +6,5 @@ DESCRIPTION = 'Answer "yes" if the number is even, '\
 
 def generate_question():
     question = randint(1, 99)
-    right_answer = 'yes' if question % 2 == 0 else 'no'
-    return question, right_answer
+    answer = 'yes' if question % 2 == 0 else 'no'
+    return question, answer
