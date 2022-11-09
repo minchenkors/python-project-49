@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from brain_games.games.game_manager import greet
+from brain_games.game_manager import greet
 
 
 def main():

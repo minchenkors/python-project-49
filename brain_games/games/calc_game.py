@@ -1,6 +1,6 @@
 from random import randint, choice
 
-RULES = 'What is the result of the expression?'
+DESCRIPTION = 'What is the result of the expression?'
 
 
 def generate_question():
@@ -9,4 +9,4 @@ def generate_question():
     operator = choice(['+', '-', '*'])
     question = f'{first_number} {operator} {second_number}'
     right_answer = str(eval(question))
-    return {'question': question, 'right_answer': right_answer}
+    return question, right_answer

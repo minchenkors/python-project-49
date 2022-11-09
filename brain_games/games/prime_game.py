@@ -1,6 +1,6 @@
 from random import randint
 
-RULES = 'Answer "yes" if given number is prime. '\
+DESCRIPTION = 'Answer "yes" if given number is prime. '\
         'Otherwise answer "no".'
 
 
@@ -11,4 +11,4 @@ def generate_question():
         if question % i == 0:
             right_answer = 'no'
             break
-    return {'question': question, 'right_answer': right_answer}
+    return question, right_answer

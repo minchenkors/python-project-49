@@ -1,6 +1,6 @@
 from random import randint
 
-RULES = 'Find the greatest common divisor of given numbers.'
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def gcd_euclid(first_number, second_number):
@@ -11,8 +11,7 @@ def gcd_euclid(first_number, second_number):
         dividend = divisor
         divisor = remainder
         remainder = dividend % divisor
-    gcd = str(divisor)
-    return gcd
+    return divisor
 
 
 def generate_question():
@@ -22,5 +21,5 @@ def generate_question():
         if first_number != second_number:
             break
     question = f'{first_number} {second_number}'
-    right_answer = gcd_euclid(first_number, second_number)
-    return {'question': question, 'right_answer': right_answer}
+    right_answer = str(gcd_euclid(first_number, second_number))
+    return question, right_answer

@@ -1,6 +1,6 @@
 from random import randint
 
-RULES = 'What number is missing in the progression?'
+DESCRIPTION = 'What number is missing in the progression?'
 
 
 def generate_question():
@@ -15,4 +15,4 @@ def generate_question():
     right_answer = str(progression[missing_number_position])
     progression[missing_number_position] = '..'
     question = " ".join(map(str, progression))
-    return {'question': question, 'right_answer': right_answer}
+    return question, right_answer
