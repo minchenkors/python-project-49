@@ -1,7 +1,7 @@
 from random import randint
 
 DESCRIPTION = 'Answer "yes" if the number is even, '\
-        'otherwise answer "no".'
+              'otherwise answer "no".'
 
 
 def generate_question():
