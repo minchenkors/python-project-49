@@ -14,7 +14,7 @@ def gcd_euclid(first_number, second_number):
     return divisor
 
 
-def generate_question():
+def generate_question_and_answer():
     while True:
         first_number = randint(1, 20)
         second_number = randint(1, 20)

@@ -18,22 +18,15 @@ def ask_question(question):
     return player_answer
 
 
-def check_answer(player_answer, answer):
-    return player_answer == answer
-
-
 def run_game(game):
     player_name = greet(description=game.DESCRIPTION)
     for _ in range(GAME_ROUNDS_COUNT):
-        question_params = game.generate_question()
-        player_answer = ask_question(question_params[0])
-        check_result = check_answer(
-            player_answer, question_params[1]
-        )
-        if not check_result:
+        question, answer = game.generate_question_and_answer()
+        player_answer = ask_question(question)
+        if player_answer != answer:
             print("'{0}' is wrong answer ;(. ".format(player_answer),
                   "Correct answer was '{0}'.".format(
-                  question_params[1])
+                  answer)
                   )
             print(f"Let's try again, {player_name}!")
             return
