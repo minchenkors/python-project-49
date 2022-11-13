@@ -14,5 +14,5 @@ def generate_question_and_answer():
     ]
     answer = str(progression[missing_number_position])
     progression[missing_number_position] = '..'
-    question = " ".join(map(str, progression))
+    question = ' '.join(map(str, progression))
     return question, answer
